@@ -5,10 +5,10 @@
 
 ## Roadmap
 
-- [ ] Theming
+- [x] Theming
 - [ ] Compact messages
 - [ ] Chat components
-  - [ ] Message Structure
+  - [x] Message Structure
   - [ ] Emojis
   - [ ] Attachables
   - [ ] Mentions
