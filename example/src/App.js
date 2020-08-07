@@ -1,10 +1,17 @@
 import React from 'react'
 
-import { ExampleComponent } from 'react-discord-components'
-import 'react-discord-components/dist/index.css'
+import { ExampleComponent, Message } from 'react-discord-components'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  <Message>
+    <User name="sdasd" />
+    <MessageContent>
+      alalals dasde ed **asdasd**
+      <Embed color="1321">
+        <Title>asdasdasd</Title>
+      </Embed>
+    </MessageContent>
+  </Message>
 }
 
 export default App
