@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://i.imgur.com/E6YHVqI.png" alt="logo daora gosto? gostei" />
+  <img src="https://i.imgur.com/yAj2yA0.png" alt="logo daora gosto? gostei" />
 </p>
 
 
