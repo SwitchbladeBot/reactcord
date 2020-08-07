@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://svgshare.com/i/NZB.svg" height="300"/>
+  <img src="https://svgshare.com/i/NaD.svg" height="200"/>
 </p>
 
 
