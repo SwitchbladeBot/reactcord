@@ -6,7 +6,7 @@
 
 [*(temporary)* Preview](https://switchbladebot.github.io/reactcord/)
 <p align="center">
-    <img src="https://i.imgur.com/X7rKVfh.png" height="200"/>
+    <img src="https://i.imgur.com/X7rKVfh.png"/>
 </p>
 
 ## Roadmap
