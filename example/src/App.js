@@ -5,9 +5,10 @@ import {
   MessageWrapper,
   MessageContent,
   ThemeProvider,
+  MessageEmbed,
   dark,
   light
-} from 'react-discord-components'
+} from 'reactcord'
 
 import Theme from './assets/theme'
 
@@ -18,7 +19,7 @@ const App = () => {
 
   return <section>
     <button className="themeSwitch" onClick={handleSwitchTheme}>
-      <Theme />
+      <Theme/>
     </button>
     <ThemeProvider theme={isDark ? dark : light}>
       <MessageWrapper style={{
@@ -26,7 +27,7 @@ const App = () => {
         boxShadow: `2px 2px 13px 3px rgba(0, 0, 0, 0.3)`
       }}>
         <Message
-          avatar={'https://cdn.discordapp.com/avatars/205873263258107905/371057e23d50433365fbf9599d810826.webp?size=128'}
+          avatar={'https://cdn.discordapp.com/avatars/205873263258107905/62b8cf8c20107e61b51b8194ac716c53.webp?size=256'}
         >
           <MessageContent
             author={{
@@ -47,7 +48,18 @@ const App = () => {
               bot: true,
               verified: true
             }}
-          >oi eu sou um bot muito **bobão**</MessageContent>
+          >
+            {/*oi eu sou um bot muito **bobão***/}
+            <MessageEmbed
+              title="bobao"
+              author={{
+                name: 'pipipi popopo',
+                icon: 'https://cdn.discordapp.com/attachments/696797678356398671/744044111157526548/20200814_192551.jpg'
+              }}
+            >
+              aa
+            </MessageEmbed>
+          </MessageContent>
         </Message>
       </MessageWrapper>
     </ThemeProvider>

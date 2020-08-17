@@ -32,6 +32,7 @@
     - [ ] Inside markdown
     - [ ] Footer
     - [ ] Color
+
 The following components can be used on other cases like a "channel selector"
 - [ ] Other components
   - [ ] Role element

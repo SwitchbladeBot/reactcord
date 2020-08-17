@@ -1,10 +1,10 @@
 {
-  "name": "react-discord-components",
+  "name": "reactcord",
   "version": "1.0.0",
   "description": "React components based on Discord Elements",
   "author": "Switchblade Team",
   "license": "MIT",
-  "repository": "SwitchbladeBot/react-discord-components",
+  "repository": "SwitchbladeBot/reactcord",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",
