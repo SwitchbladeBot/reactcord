@@ -31,8 +31,8 @@
     - [ ] Reaction
     - [ ] Links
   - [ ] Embeds
-    - [ ] Title
-    - [ ] Author
+    - [x] Title
+    - [x] Author
     - [ ] Description
     - [ ] Fields
     - [ ] Inside markdown
