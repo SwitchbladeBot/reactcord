@@ -33,11 +33,11 @@
   - [ ] Embeds
     - [x] Title
     - [x] Author
-    - [ ] Description
-    - [ ] Fields
+    - [x] Description
+    - [x] Fields
     - [ ] Inside markdown
-    - [ ] Footer
-    - [ ] Color
+    - [x] Footer
+    - [x] Color
 
 The following components can be used on other cases like a "channel selector"
 - [ ] Other components
