@@ -2,6 +2,12 @@
   <img src="https://svgshare.com/i/NaD.svg" height="200"/>
 </p>
 
+## Preview
+
+[*(temporary)* Preview](https://switchbladebot.github.io/reactcord/)
+<p align="center">
+    ![preview](https://i.imgur.com/X7rKVfh.png)
+</p>
 
 ## Roadmap
 
