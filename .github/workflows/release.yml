@@ -10,7 +10,7 @@ jobs:
     name: Release if needed
     runs-on: ubuntu-latest
     steps:
-      - uses: MontyD/package-json-updated-action
+      - uses: MontyD/package-json-updated-action@1.0.1
         name: Version Changed?
         id: version-updated
         with:
