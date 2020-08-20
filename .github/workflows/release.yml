@@ -24,6 +24,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.ref }}
-          release_name: ${{ github.ref }}
+          tag_name: ${{ steps.version-updated.outputs.current-package-version }}
+          release_name: ${{ steps.version-updated.outputs.current-package-version }}
           prerelease: ${{ startsWith(steps.version-updated.outputs.current-package-version, '0.') }}
