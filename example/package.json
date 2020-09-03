@@ -10,10 +10,10 @@
     "eject": "node ../node_modules/react-scripts/bin/react-scripts.js eject"
   },
   "dependencies": {
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "react": "../node_modules/react",
+    "react-dom": "../node_modules/react-dom",
     "react-scripts": "^3.4.1",
-    "reactcord": "../"
+    "reactcord": "file:../"
   },
   "devDependencies": {
     "@babel/plugin-syntax-object-rest-spread": "^7.8.3"
