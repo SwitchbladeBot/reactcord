@@ -7,7 +7,10 @@ import {
   ThemeProvider,
   MessageEmbed,
   dark,
-  light
+  light,
+  MessageText,
+  Mentions,
+  Mention
 } from 'reactcord'
 
 import Theme from './assets/theme'
@@ -25,10 +28,11 @@ const App = () => {
       <MessageWrapper style={{
         borderRadius: 3,
         boxShadow: `2px 2px 13px 3px rgba(0, 0, 0, 0.3)`,
-        maxWidth: 800
+        maxWidth: 800,
+        margin: '80px 0'
       }}>
         <Message
-          avatar={'https://cdn.discordapp.com/avatars/205873263258107905/62b8cf8c20107e61b51b8194ac716c53.webp?size=256'}
+          avatar={'https://media.discordapp.net/attachments/445647209892020234/894373458232901682/e8ef68ca770be9f28226ad76a3ce3c1f.png'}
         >
           <MessageContent
             author={{
@@ -36,20 +40,26 @@ const App = () => {
               user: 'metehus'
             }}
           >
-            Como *você* vai, **bladey**, ta `daora`?
+            <MessageText>
+            Como *você* vai, **bladey**, ta `daora` 👀?
+            </MessageText>
+              <MessageContent>
+              Diz aí <Mention>@Switchblade</Mention>
+              </MessageContent>
           </MessageContent>
         </Message>
         <Message
-          avatar={'https://cdn.discordapp.com/avatars/445277324175474689/f57d8a09a934d7ae9e857bcc0a0ef741.webp'}
+          avatar={'https://media.discordapp.net/attachments/445647209892020234/894373564323606538/60649075b98ef858edab5d3bcd000446.png'}
         >
           <MessageContent
             author={{
-              color: '#7289DA',
+              color: '#5865f2',
               user: 'Switchblade',
               bot: true,
               verified: true
             }}
           >
+            <MessageText>This is an **embed**:</MessageText>
 
             <MessageEmbed
               title="bobao"
@@ -63,7 +73,7 @@ const App = () => {
               }}
               color="#03fc84"
               thumbnail="https://cdn.discordapp.com/attachments/696797678356398671/745052530714869780/IMG-20200817-WA0021.jpeg"
-              image="https://cdn.discordapp.com/attachments/696797678356398671/744681438649122866/FB_IMG_1597616284534.jpg"
+              image="https:///64.media.tumblr.com/ec9059ee71079dcd7c535add13e46f9d/5dafeb09e955b046-af/s1280x1920/68fed187afcf752338af1401ffbca6d0d3e257c1.gif"
               fields={[
                 {
                   name: 'bom dia',
@@ -86,9 +96,29 @@ const App = () => {
               ]}
             >
               Mussum Ipsum, cacilds vidis litro abertis. Si num tem leite então bota uma pinga aí cumpadi! Nec orci ornare
-              consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis. Quem num gosta di mim que vai caçá
-              sua turmis! Suco de cevadiss deixa as pessoas mais interessantis.
+              consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis.
+
+              [Click me!!](https://youtu.be/iik25wqIuFo)
             </MessageEmbed>
+          </MessageContent>
+        </Message>
+        <Message
+        avatar={'https://media.discordapp.net/attachments/445647209892020234/894373458232901682/e8ef68ca770be9f28226ad76a3ce3c1f.png'}
+        >
+          <MessageContent
+            author={{
+              color: '#2ad1a4',
+              user: 'metehus'
+            }}
+          >
+            <MessageText>
+              chamando todos os 
+            </MessageText>
+            <Mention color="#9b59b6">@Legacy Front-end Developer</Mention>
+            <MessageText>
+              pra
+            </MessageText>
+            <Mention>#festinha</Mention>
           </MessageContent>
         </Message>
       </MessageWrapper>

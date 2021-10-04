@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import MessageText from './MessageText'
 
 const Wrapper = styled.div`
   display: flex;
@@ -9,7 +10,7 @@ const Wrapper = styled.div`
 
 const Field = styled.div`
   margin-top: 8px;
-`;
+`
 
 const FieldTitle = styled.span`
   font-weight: 600;
@@ -18,7 +19,7 @@ const FieldTitle = styled.span`
   line-height: 1.125rem;
   min-width: 0;
   display: block;
-  color: ${({ theme }) => theme.palette.embed.header}
+  color: ${({ theme }) => theme.palette.embed.header};
 `
 
 const FieldValue = styled.span`
@@ -30,22 +31,33 @@ const FieldValue = styled.span`
 `
 
 function FieldsWrapper(props) {
-  return <Wrapper>
-    {
-      props.fields.map(field => <Field style={field.inline ? {
-        flex: 1,
-        minWidth: 150,
-        flexBasis: 'auto'
-      } : {
-        flex: 0,
-        minWidth: '100%',
-        maxWidth: 506
-      }}>
-        <FieldTitle>{field.name}</FieldTitle>
-        <FieldValue>{field.value}</FieldValue>
-      </Field>)
-    }
-  </Wrapper>
+  return (
+    <Wrapper>
+      {props.fields.map((field, i) => (
+        <Field
+          key={i}
+          style={
+            field.inline
+              ? {
+                  flex: 1,
+                  minWidth: 150,
+                  flexBasis: 'auto'
+                }
+              : {
+                  flex: 0,
+                  minWidth: '100%',
+                  maxWidth: 506
+                }
+          }
+        >
+          <FieldTitle>{field.name}</FieldTitle>
+          <FieldValue>
+            <MessageText>{field.value}</MessageText>
+          </FieldValue>
+        </Field>
+      ))}
+    </Wrapper>
+  )
 }
 
 export default FieldsWrapper
