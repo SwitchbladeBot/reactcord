@@ -1,18 +1,16 @@
 import React from 'react'
-import styled from 'styled-components'
 import MessageHeader from './MessageHeader'
-
-const MessageScaffold = styled.div`
-  & > p {
-    margin: 0px
-  }
-`
+import MessageText from './MessageText'
 
 export default function MessageContent({ children, author }) {
-  return <div>
-    <MessageHeader {...author} />
-    <MessageScaffold>
-      {children}
-    </MessageScaffold>
-  </div>
+  return (
+    <div>
+      {author && <MessageHeader {...author} />}
+      {typeof children === 'string' ? (
+        <MessageText>{children}</MessageText>
+      ) : (
+        children
+      )}
+    </div>
+  )
 }

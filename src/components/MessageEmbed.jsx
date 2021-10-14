@@ -1,13 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
+import MessageText from './MessageText'
 import FieldsWrapper from './FieldsWrapper'
 
 const Embed = styled.div`
-  max-wdth: 520px;
+  max-width: 520px;
   border-radius: 4px;
-  background: ${p => p.theme.palette.embed.background};
-  border-left: 4px solid ${p => p.theme.palette.embed.color};
-  padding: .5rem 1rem 1rem .75rem;
+  background: ${(p) => p.theme.palette.embed.background};
+  border-left: 4px solid ${(p) => p.theme.palette.embed.color};
+  padding: 0.5rem 1rem 1rem 0.75rem;
   line-height: 1.375rem;
 `
 
@@ -19,7 +20,7 @@ const EmbedTitle = styled.span`
   display: block;
   font-weight: 600;
   margin-top: 8px;
-  color: ${({ theme }) => theme.palette.embed.header}
+  color: ${({ theme }) => theme.palette.embed.header};
 `
 
 const EmbedContent = styled.div`
@@ -38,7 +39,7 @@ const EmbedAuthor = styled.div`
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-weight: 600;
-  color: ${({ theme }) => theme.palette.embed.header}
+  color: ${({ theme }) => theme.palette.embed.header};
 `
 
 const AuthorIcon = styled.img`
@@ -83,46 +84,40 @@ const Thumbnail = styled.img`
 `
 
 function MessageEmbed(props) {
-  return <Embed style={{
-    borderColor: props.color
-  }}>
-    <EmbedWrapper>
-      <div>
-        {
-          props.author && props.author.name && <EmbedAuthorWrapper>
-            {
-              props.author.icon && <AuthorIcon src={props.author.icon} />
-            }
-            <EmbedAuthor>{props.author.name}</EmbedAuthor>
-          </EmbedAuthorWrapper>
-        }
-        {
-          props.title && <EmbedTitle>{props.title}</EmbedTitle>
-        }
-        <EmbedContent>
-          {props.children}
-        </EmbedContent>
-        {
-          props.fields && props.fields.length && <FieldsWrapper fields={props.fields} />
-        }
-      </div>
-      {
-        props.thumbnail && <Thumbnail src={props.thumbnail} />
-      }
-    </EmbedWrapper>
+  return (
+    <Embed
+      style={{
+        borderColor: props.color
+      }}
+    >
+      <EmbedWrapper>
+        <div>
+          {props.author && props.author.name && (
+            <EmbedAuthorWrapper>
+              {props.author.icon && <AuthorIcon src={props.author.icon} />}
+              <EmbedAuthor>{props.author.name}</EmbedAuthor>
+            </EmbedAuthorWrapper>
+          )}
+          {props.title && <EmbedTitle>{props.title}</EmbedTitle>}
+          <EmbedContent>
+            <MessageText>{props.children}</MessageText>
+          </EmbedContent>
+          {props.fields && props.fields.length && (
+            <FieldsWrapper fields={props.fields} />
+          )}
+        </div>
+        {props.thumbnail && <Thumbnail src={props.thumbnail} />}
+      </EmbedWrapper>
 
-    {
-      props.image && <Media src={props.image} />
-    }
-    {
-      props.footer && props.footer.text && <FooterWrapper>
-        {
-          props.footer.icon && <FooterIcon src={props.footer.icon} />
-        }
-        <FooterText>{props.footer.text}</FooterText>
-      </FooterWrapper>
-    }
-  </Embed>
+      {props.image && <Media src={props.image} />}
+      {props.footer && props.footer.text && (
+        <FooterWrapper>
+          {props.footer.icon && <FooterIcon src={props.footer.icon} />}
+          <FooterText>{props.footer.text}</FooterText>
+        </FooterWrapper>
+      )}
+    </Embed>
+  )
 }
 
 export default MessageEmbed

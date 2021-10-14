@@ -9,20 +9,24 @@
     <img src="https://i.imgur.com/X7rKVfh.png"/>
 </p>
 
+## Twemoji
+
+This package uses [twemoji](https://github.com/twitter/twemoji) to parse emojis. We strongly recommend to take a look at their [attribution guide](https://github.com/twitter/twemoji#attribution-requirements).
+
 ## Roadmap
 
 - [x] Theming
 - [ ] Compact messages
 - [ ] Chat components
   - [x] Message Structure
-  - [ ] Emojis
+  - [x] Emojis
   - [ ] Attachables
-  - [ ] Mentions
-    - [ ] Role
-    - [ ] User
-    - [ ] Channel
+  - [x] Mentions
+    - [x] Role
+    - [x] User
+    - [x] Channel
   - [ ] Markdown
-    - [ ] Basic (bold, italic, strike)
+    - [x] Basic (bold, italic, strike)
     - [ ] Quotes
     - [ ] Code blocks
     - [ ] Spoiler
@@ -30,12 +34,12 @@
     - [ ] Invites
     - [ ] Reaction
     - [ ] Links
-  - [ ] Embeds
+  - [x] Embeds
     - [x] Title
     - [x] Author
     - [x] Description
     - [x] Fields
-    - [ ] Inside markdown
+    - [x] Inside markdown
     - [x] Footer
     - [x] Color
 

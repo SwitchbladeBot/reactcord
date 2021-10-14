@@ -17,10 +17,12 @@ const Image = styled.img`
 `
 
 export default function Message({ avatar, children }) {
-  return <MessageScaffold>
-    <Avatar>
-      <Image src={avatar} />
-    </Avatar>
-    {children}
-  </MessageScaffold>
+  return (
+    <MessageScaffold>
+      <Avatar>
+        <Image src={avatar} />
+      </Avatar>
+      {children}
+    </MessageScaffold>
+  )
 }

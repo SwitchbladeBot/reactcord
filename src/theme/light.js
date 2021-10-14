@@ -1,7 +1,9 @@
 export default {
   palette: {
-    blurple: '#7289DA',
+    blurple: '#5865f2',
     background: '#fff',
+    backgroundSecondary: '#f2f3f5',
+    linkColor: '#00aff4',
     notQuiteBlack: '#23272A',
     text: '#2e3338',
     textMuted: '#72767d',
@@ -12,6 +14,6 @@ export default {
     }
   },
   typography: {
-    text: '\'Lato\', sans-serif;'
+    text: "'Lato', sans-serif;"
   }
 }
